@@ -3,6 +3,8 @@ import {useState} from "react";
 import "milligram";
 import LoginForm from "./LoginForm";
 import UserPanel from "./UserPanel";
+import NewMeetingForm from "./meetings/NewMeetingForm";
+import MeetingsPage from "./meetings/MeetingsPage";
 
 function App() {
     const [loggedInUsername, setLoggedInUsername] = useState(null);
@@ -16,6 +18,7 @@ function App() {
                                 onLogout = {() => setLoggedInUsername(null)}/>
                     : <LoginForm onLogin={(email) => setLoggedInUsername(email)}/>
             }
+
         </div>
     );
 }
